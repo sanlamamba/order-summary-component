@@ -1,0 +1,134 @@
+@import url("./reset.css");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+a {
+  color: var(--bright-blue);
+}
+a:hover {
+  text-decoration: inherit;
+  opacity: 0.7;
+}
+.card__container {
+  background-color: white;
+  z-index: 2;
+  width: calc(100% - 40px);
+  max-width: calc(400px);
+  box-shadow: 0 0 50px -30px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__container > img {
+  width: 100%;
+}
+.card__container > :not(img) {
+  padding: 2em 12.5% 1em;
+}
+
+.card__text_container {
+  text-align: center;
+}
+.card__text_title {
+  color: var(--dark-blue);
+  font-size: 160%;
+  font-weight: 700;
+  padding: 0 0 10px;
+}
+.card__text_desc {
+  transform: scale(0.9);
+  line-height: 1.5;
+  color: var(--desaturated-blue);
+}
+
+.card__pricing_container {
+  margin-top: 18px;
+  background-color: var(--very-pale-blue);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+.card__pricing_text {
+  flex: 1;
+}
+.card__pricing_text_title {
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 0.85em;
+}
+.card__pricing_text_subtext {
+  font-size: 0.89em;
+  letter-spacing: 0.8px;
+  color: var(--desaturated-blue);
+}
+.card__pricing_link {
+  justify-self: flex-end;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.card__button_container {
+  margin: 15px 0px 0px;
+}
+button {
+  font-size: 0.75em;
+  width: 100%;
+  margin: 5px 0px;
+  padding: 15px;
+  font-weight: 800;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s ease-in;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card__button_main {
+  background-color: var(--bright-blue);
+  color: white;
+  box-shadow: 0px 10px 30px -5px hsla(224, 23%, 55%, 0.5);
+}
+.card__button_main:hover {
+  opacity: 0.7;
+}
+.card__button_sec {
+  color: var(--desaturated-blue);
+}
+.card__button_sec:hover {
+  color: var(--dark-blue);
+}
+.bg__decoration {
+  position: absolute;
+  height: 100%;
+  background-color: var(--pale-blue);
+  z-index: 1;
+  display: flex;
+}
+.bg__decoration img {
+  height: 100%;
+  width: 100%;
+  transform: translateY(-40%);
+}
+.mobile {
+  display: none;
+}
+@media only screen and (max-width: 375px) {
+  img.desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .card__container > :not(img) {
+    padding: 2em 7% 1em;
+  }
+}
